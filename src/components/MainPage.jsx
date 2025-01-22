@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CarList from "./CarList";
+import ToDo from "./ToDo";
 import MOCK_DATA from "../mockData/mockData.json";
 
 const filterCars = (searchText, listOfCars) => {
@@ -7,10 +8,8 @@ const filterCars = (searchText, listOfCars) => {
   if (!searchText) {
     return listOfCars;
   }
-  const filteredCars = listOfCars.filter(({ car_model }) =>
-    car_model.toLowerCase().includes(searchText.toLowerCase())
-  );
-  console.log(filteredCars)
+  const filteredCars = listOfCars.filter(({ car_model }) => car_model.toLowerCase().includes(searchText.toLowerCase()));
+  console.log(filteredCars);
   return filteredCars;
 };
 
@@ -46,6 +45,7 @@ export default function App() {
         />
       </div>
       <CarList carList={carList} />
+      <ToDo />
     </div>
   );
 }

@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import CarList from "./CarList";
 import ToDo from "./ToDo";
 import Counter from "./Counter";
+import Reverse from "./ReversedList";
+import Controlled from "./Controlled";
+import Refactor from './Refactor'
+import Debounce from "./Debounce";
+import { RefactorCounter } from "./Refactor2";
 import MOCK_DATA from "../mockData/mockData.json";
 
 const filterCars = (searchText, listOfCars) => {
@@ -48,6 +53,11 @@ export default function App() {
       <CarList carList={carList} />
       <ToDo />
       <Counter/>
+      <Reverse/>
+      <Controlled/>
+      <Refactor/>
+      <RefactorCounter/>
+      <Debounce/>
     </div>
   );
 }

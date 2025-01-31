@@ -9,7 +9,7 @@ export const Counter = () => {
   const [count, setCount] = useState(0);
   const [run, setRun] = useState(false);
   const time1 = new Date().getSeconds();
-  console.log(time1);
+  // console.log(time1);
 
   useEffect(() => {
     if (run) {

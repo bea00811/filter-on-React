@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import CarList from "./CarList";
 import ToDo from "./ToDo";
+import Counter from "./Counter";
 import MOCK_DATA from "../mockData/mockData.json";
 
 const filterCars = (searchText, listOfCars) => {
@@ -46,6 +47,7 @@ export default function App() {
       </div>
       <CarList carList={carList} />
       <ToDo />
+      <Counter/>
     </div>
   );
 }
